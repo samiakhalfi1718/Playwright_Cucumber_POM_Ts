@@ -3,14 +3,26 @@ Voici comment configurer un projet Playwright avec Cucumber et le Page Object Mo
 ________________________________________
 🚀 1. Initialisation du projet
 Créez un dossier et initialisez un projet Node.js :
+
+
 mkdir projet-playwright-cucumber && cd projet-playwright-cucumber
+
+
 npm init -y
 ________________________________________
 📦 2. Installation des dépendances
 Installez Playwright, Cucumber, et les outils nécessaires :
+
+
 npm install --save-dev @playwright/test playwright
+
+
 npx playwright install
+
+
 npm install --save-dev @cucumber/cucumber ts-node @types/node
+
+
 ________________________________________
 📁 3. Structure du projet
 Organisez votre projet comme ceci :
