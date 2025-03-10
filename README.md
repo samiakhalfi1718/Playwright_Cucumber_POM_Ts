@@ -14,18 +14,7 @@ npm install --save-dev @cucumber/cucumber ts-node @types/node
 ________________________________________
 📁 3. Structure du projet
 Organisez votre projet comme ceci :
-📁 projet-playwright-cucumber/
- ├── 📁 tests/
- │   ├── 📁 features/          # Fichiers .feature (scénarios Cucumber)
- │   │   ├── login.feature
- │   ├── 📁 stepDefinitions/   # Implémentation des steps
- │   │   ├── login.steps.ts
- │   ├── 📁 pages/             # Page Object Model
- │   │   ├── login.page.ts
- ├── package.json
- ├── tsconfig.json
- ├── cucumber.js
-________________________________________
+![image](https://github.com/user-attachments/assets/ca42c675-764b-42be-881d-2bcf96e76475)
 
 
 ⚙️ 4. Configuration de TypeScript
