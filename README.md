@@ -31,16 +31,28 @@ Organisez votre projet comme ceci :
 
 ⚙️ 4. Configuration de TypeScript
 Créez un fichier tsconfig.json à la racine :
+
+
 {
+
   "compilerOptions": {
+  
     "target": "ES6",
+    
     "module": "CommonJS",
+    
     "strict": true,
+    
     "esModuleInterop": true,
+    
     "skipLibCheck": true,
+    
     "forceConsistentCasingInFileNames": true,
+    
     "outDir": "dist"
+    
   }
+  
 }
 ________________________________________
 ⚙️ 5. Configuration de Cucumber
