@@ -57,13 +57,22 @@ Créez un fichier tsconfig.json à la racine :
 ________________________________________
 ⚙️ 5. Configuration de Cucumber
 Créez un fichier cucumber.js à la racine :
+
+
 module.exports = {
+
   default: {
+  
     require: ["tests/stepDefinitions/*.ts"],
+    
     format: ["progress-bar"],
+    
     paths: ["tests/features/*.feature"],
+    
     requireModule: ["ts-node/register"],
+    
     worldParameters: {},
+    
   },
 };
 ________________________________________
@@ -74,28 +83,48 @@ ________________________________________
 
 ✍️ 6. Création d'un scénario Cucumber
 Créez un fichier tests/features/login.feature :
+
+
 Feature: Authentification
 
+
   Scenario: Connexion avec des identifiants valides
+  
     Given l'utilisateur est sur la page de connexion
+    
     When il saisit "standard_user" et "secret_sauce"
+    
     Then il doit être redirigé vers la page d'accueil
+
+    
 ________________________________________
 🏗 7. Création du Page Object Model
 Dans tests/pages/login.page.ts :
+
+
 import { Page } from "@playwright/test";
 
+
 export class LoginPage {
+
   constructor(private page: Page) {}
+  
 
   async navigate() {
+  
     await this.page.goto("https://www.saucedemo.com/");
+    
   }
+  
 
   async login(email: string, password: string) {
+  
     await this.page.fill("#username", email);
+    
     await this.page.fill("#password", password);
+    
     await this.page.click("#login-button");
+    
   }
 }
 ________________________________________
@@ -105,29 +134,48 @@ ________________________________________
 
 🖊 8. Implémentation des Step Definitions
 Dans tests/stepDefinitions/login.steps.ts :
+
+
 import { Given, When, Then } from "@cucumber/cucumber";
+
 import { expect } from "@playwright/test";
+
 import { LoginPage } from "../pages/login.page";
+
 import { chromium } from "playwright";
 
+
 let page: any;
+
 let loginPage: LoginPage;
 
+
 Given("l'utilisateur est sur la page de connexion", async function () {
+
   const browser = await chromium.launch({ headless: false });
+  
   page = await browser.newPage();
+  
   loginPage = new LoginPage(page);
+  
   await loginPage.navigate();
+  
 });
 
 When("il saisit {string} et {string}", async function (email: string, password: string) {
+
   await loginPage.login(email, password);
+  
 });
 
 Then("il doit être redirigé vers la page d'accueil", async function () {
+
   await page.waitForURL("https://www.saucedemo.com/inventory.html");
+  
   expect(page.url()).toBe("https://www.saucedemo.com/inventory.html");
+  
   await page.close();
+  
 });
 ________________________________________
 
@@ -135,11 +183,19 @@ ________________________________________
 
 
 🎯 9. Exécution des tests
+
 Ajoutez un script dans package.json :
+
+
 "scripts": {
+
   "test": "cucumber-js"
+  
 }
+
+
 Lancez les tests avec :
+
 npm test
 ________________________________________
 
