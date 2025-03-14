@@ -1,0 +1,63 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "authentification;connexion-avec-des-identifiants-valides",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Connexion avec des identifiants valides",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "l'utilisateur est sur la page de connexion",
+            "match": {
+              "location": "tests\\stepDefinitions\\login.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1161746999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "il saisit \"standard_user\" et \"secret_sauce\"",
+            "match": {
+              "location": "tests\\stepDefinitions\\login.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 231517200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "il doit être redirigé vers la page d'accueil",
+            "match": {
+              "location": "tests\\stepDefinitions\\login.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96804899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "authentification",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Authentification",
+    "tags": [],
+    "uri": "tests\\features\\login.feature"
+  }
+]

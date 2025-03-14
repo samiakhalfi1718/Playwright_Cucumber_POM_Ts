@@ -7,9 +7,15 @@ export class LoginPage {
     await this.page.goto("https://www.saucedemo.com/");
   }
 
-  async login(email: string, password: string) {
+  async fillUsername(email: string) {
     await this.page.fill("#user-name", email);
+  }
+
+  async fillPassword(password: string) {
     await this.page.fill("#password", password);
+  }
+
+  async clickBtn() {
     await this.page.click("#login-button");
   }
 }

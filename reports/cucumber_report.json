@@ -1,0 +1,79 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "authentification;connexion-avec-des-identifiants-valides",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Connexion avec des identifiants valides",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1136893800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "l'utilisateur est sur la page de connexion",
+            "match": {
+              "location": "tests\\stepDefinitions\\login.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2722533099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "il saisit \"standard_user\" et \"secret_sauce\"",
+            "match": {
+              "location": "tests\\stepDefinitions\\login.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 483516700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "il doit être redirigé vers la page d'accueil",
+            "match": {
+              "location": "tests\\stepDefinitions\\login.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33289999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 648302600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "authentification",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Authentification",
+    "tags": [],
+    "uri": "tests\\features\\login.feature"
+  }
+]
